@@ -42,7 +42,7 @@ def abuseipdb(sessionpeer, mailfrom, mailto):
     # using configparser to pull the apikey details for abuseipdb.
     headers = {'Key': apikey, 'Accept': 'application/json', }
     data = {'categories': '11, 15', 'ip': sessionpeer,
-            'comment': f'{sessionpeer} triggered Icarus Smtp honeypot. Check us out on github'}
+            'comment': f'{sessionpeer} triggered ABUSELYNX'}
     # this is the API. https://docs.abuseipdb.com/#report-endpoint
 
     if abuseip != "no":  # checking if abuseipdb is enabled. Disabled by default.
@@ -79,7 +79,7 @@ def report(ipaddr, preport):
     # using configparser to pull the apikey details for abuseipdb.
     headers = {'Key': apikey, 'Accept': 'application/json', }
     data = {'categories': '14, 15', 'ip': ipaddr,
-            'comment': f'{ipaddr} triggered Icarus honeypot on port {port}. Check us out on github.'}
+            'comment': f'{ipaddr} triggered triggered ABUSELYNX on port {port}.'}
     # this is the API. https://docs.abuseipdb.com/#report-endpoint
 
     if abuseip != "no":  # checking if abuseipdb is enabled. Disabled by default.
